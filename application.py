@@ -13,7 +13,7 @@ def get_todos():
         for q in query_db:
             todos.append(q.json())
         db.session.close()
-        return jsonify({ 'todos': todos })
+        return jsonify({ 'data': todos })
     except:
         db.session.rollback()
         return abort(500)
@@ -25,10 +25,10 @@ def create_todo():
     try:
         data_entered = TodoList(title=request.json['title'], notes=request.json.get('notes', ''))
         db.session.add(data_entered)
-        db.session.expunge_all()
-        db.session.commit()  
+        db.session.commit() 
+        db.session.refresh(data_entered) 
         db.session.close()
-        return jsonify({ 'task': data_entered.json() }), 201
+        return jsonify({ 'data': data_entered.json() }), 201
     except:
         db.session.rollback()
         return abort(500)
