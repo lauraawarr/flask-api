@@ -2,11 +2,10 @@ from flask import Flask, request, jsonify, abort, make_response
 from application import application
 from application import db
 from application.models import TodoList
-# from application.forms import EnterDBInfo, RetrieveDBInfo
 
 # Elastic Beanstalk initalization
 application.debug=False
-application.secret_key = 'cC1YCIWOj9GgWspgNEo2'
+application.secret_key = 'AKIAYKPGJGQ5ZMQXHZC7'
 
 @application.route('/todos', methods=['GET'])
 def get_todos():
