@@ -3,7 +3,6 @@ from application import application
 from application import db
 from application.models import TodoList
 
-# Elastic Beanstalk initalization
 application.debug=False
 
 @application.route('/todos', methods=['GET'])
