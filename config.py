@@ -2,5 +2,3 @@ SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://admin:keyhole123@flask-api.cfchkkfvtu
 
 SQLALCHEMY_POOL_RECYCLE = 3600
 SQLALCHEMY_TRACK_MODIFICATIONS = False
-
-SECRET_KEY = 'dsaf0897sfdg45sfdgfdsaqzdf98sdf0a'

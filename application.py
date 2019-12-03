@@ -5,7 +5,6 @@ from application.models import TodoList
 
 # Elastic Beanstalk initalization
 application.debug=False
-application.secret_key = 'AKIAYKPGJGQ5ZMQXHZC7'
 
 @application.route('/todos', methods=['GET'])
 def get_todos():
