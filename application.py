@@ -5,8 +5,7 @@ from application.models import TodoList
 # from application.forms import EnterDBInfo, RetrieveDBInfo
 
 # Elastic Beanstalk initalization
-application.debug=True
-# change this to your own value
+application.debug=False
 application.secret_key = 'cC1YCIWOj9GgWspgNEo2'
 
 @application.route('/todos', methods=['GET'])
